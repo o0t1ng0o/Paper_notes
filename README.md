@@ -11,4 +11,7 @@ This repository contains the paper notes for medical image, computer vision or a
          (3) 还是应该做一个医疗图像自己的pretrained model？<br>
          还有一个问题，还是说我们应该投入精力在hyperparameters的search上？做自动的超参数查找？<br>
          
-   
+## Seeded segmentation
+首先，seeded segmentation在医疗图像真的很重要吗？
+
+1. 
