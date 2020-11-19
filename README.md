@@ -15,3 +15,7 @@ This repository contains the paper notes for medical image, computer vision or a
 首先，seeded segmentation在医疗图像真的很重要吗？
 
 1. 
+
+## Transformer for Computer Vision
+
+越来越多的工作利用transformer来解决CV的问题，例如目标检测、face anti-spoofing和图像分类等等。利用了transformer能够学习不同patch间联系的能力，因此，在医疗图像上是否也可以使用？
