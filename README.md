@@ -36,31 +36,31 @@ augmented consistency loss: (1) classic version: Loss = CE(f(x_aug), label) (2) 
 
 ## Data Bias
 
-1. [MITIGATING THE BIAS OF CENTERED OBJECTS IN COMMON DATASETS] (https://arxiv.org/pdf/2112.09195.pdf)
+1. [MITIGATING THE BIAS OF CENTERED OBJECTS IN COMMON DATASETS] (https://arxiv.org/pdf/2112.09195.pdf)<br>
 该论文希望通过一种新的数据增强的方式缓解物体位于中心的bias。
 
 ## Basic Components for Training
-1. [ADAPTIVELY CUSTOMIZING ACTIVATION FUNCTIONS FOR VARIOUS LAYERS] (https://arxiv.org/pdf/2112.09442.pdf)
-该论文提出了一个自适应的激活函数，用于提高收敛速度和性能。例子如下：
-ASimoid : fAsimoid = biSigmoid(aiz + ci) + di
-ATanh : fAtanh = bitanh(aiz + ci) + di
-AReLU : fArelu = maximum(aiz + ci, biz + di) 
+1. [ADAPTIVELY CUSTOMIZING ACTIVATION FUNCTIONS FOR VARIOUS LAYERS] (https://arxiv.org/pdf/2112.09442.pdf)<br>
+该论文提出了一个自适应的激活函数，用于提高收敛速度和性能。例子如下：<br>
+ASimoid : fAsimoid = biSigmoid(aiz + ci) + di<br>
+ATanh : fAtanh = bitanh(aiz + ci) + di<br>
+AReLU : fArelu = maximum(aiz + ci, biz + di) <br>
 
 ## Lifelong learning
-1. [AN EMPIRICAL INVESTIGATION OF THE ROLE OF PRETRAINING IN LIFELONG LEARNING] (https://arxiv.org/pdf/2112.09153.pdf)
+1. [AN EMPIRICAL INVESTIGATION OF THE ROLE OF PRETRAINING IN LIFELONG LEARNING] (https://arxiv.org/pdf/2112.09153.pdf)<br>
 This paper found that lifelong learning methods should focus on learning generic features instead of simply focusing on alleviating catastrophic forgetting, as generic features appear to undergo minimal forgetting. 
 
 ## CLIP
-1. [Align and Prompt: Video-and-Language Pre-training with Entity Prompts] (https://arxiv.org/pdf/2112.09583.pdf)
+1. [Align and Prompt: Video-and-Language Pre-training with Entity Prompts] (https://arxiv.org/pdf/2112.09583.pdf)<br>
 该论文介绍了一个视频文字的与训练框架。在预训练的过程中，通过对齐视频和文字中的多个实体，来提升在下游任务中的性能。相比现有的方法，它不需要检测器，这是关键的地方。
 
 ## Knowledge Distillation
-1. [Pixel Distillation: A New Knowledge Distillation Scheme for Low-Resolution Image Recognition] (https://arxiv.org/pdf/2112.09532.pdf)
-本文的动机是希望（1）在降低模型输入图像的分辨率的同时，还能保证低分辨率图像特征和高分辨率图像特征相似，另外（2）还希望能够达到压缩模型参数的目的。
+1. [Pixel Distillation: A New Knowledge Distillation Scheme for Low-Resolution Image Recognition] (https://arxiv.org/pdf/2112.09532.pdf)<br>
+本文的动机是希望（1）在降低模型输入图像的分辨率的同时，还能保证低分辨率图像特征和高分辨率图像特征相似，另外（2）还希望能够达到压缩模型参数的目的。<br>
 因此，为了动机（2）该论文提出了除了老师和学生模型以外，还提出加入一个助教模型，用于减少模型的参数；为了动机（1）本文提出了在学生和助教模型之间进行像素级的知识蒸馏，保证特征表示与高分辨率的特征一致。
 
 
 
 ## Medical Image Analysis
-1. [Unified 2D and 3D Pre-training for Medical Image Classification and Segmentation] (https://arxiv.org/pdf/2112.09356.pdf)
-该论文提出了打破2d和3d的gap，并且先在两种数据上先预训练，然后各自下游任务上再fine tune。
+1. [Unified 2D and 3D Pre-training for Medical Image Classification and Segmentation] (https://arxiv.org/pdf/2112.09356.pdf)<br>
+该论文提出了打破2d和3d的gap，并且先在两种数据上先预训练，然后各自下游任务上再fine tune。<br>
