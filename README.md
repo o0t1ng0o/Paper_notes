@@ -1,6 +1,6 @@
 # Paper_notes
 This repository contains the paper notes for medical image, computer vision or any other area.
-
+This repository is regarded as a notebook. Please feel free to correct me. 
 
 ## Rethinking 
 1. [Rethinking the hyperparameters for fine-tuning](https://arxiv.org/pdf/2002.11770.pdf) <br>
@@ -40,6 +40,9 @@ augmented consistency loss: (1) classic version: Loss = CE(f(x_aug), label) (2) 
 
 1. [Self-Distilled Self-Supervised Representation Learning](https://arxiv.org/pdf/2111.12958.pdf)
 这篇论文介绍了如何提升互信息的upper bound。首先，两张图像的最大互信息肯定是他们的content C。其次，因为随着网络层数增加，其提到的特征就更加抽象，和content偏移也就更远，所以默认浅层的feature f1_l相比深层的feature f1_L更加接近content。因此，作者认为I(f1_L, f2_L) <= I(f1_l, f2_L), （I表示互信息），即深层之间的互信息 小于 浅层和深层间的互信息。进而认为，I(f1_l, f2_L)这便是互信息的上界。
+
+2. [Are Large-scale Datasets Necessary for Self-Supervised Pre-training?](https://arxiv.org/pdf/2112.10740v1.pdf)
+这篇论文应该是Masked auto-endocder那篇文章的延伸。在同样的框架上，同样的图片输入encoder，decoder分别输入两个不同的masked encoded features，并重构其masked的部分。重构后，两个不同的结果计算互信息损失，提升特征的相似性。该方法在COCO上pretrained的效果竟然比在imagenet的效果有比较大的提升。
 
 ## Data Bias
 
