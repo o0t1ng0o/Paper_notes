@@ -34,7 +34,7 @@ augmented consistency loss: (1) classic version: Loss = CE(f(x_aug), label) (2) 
 
 ## Image Translation
 
-该论文提出利用一个预定义的mask让网络选择性的优化mask的部分。在SR中，我们也可以用mask将前景和背景分离，分开predict。
+//该论文提出利用一个预定义的mask让网络选择性的优化mask的部分。在SR中，我们也可以用mask将前景和背景分离，分开predict。
 
 ## Self-Supervised Representation Learning
 
