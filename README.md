@@ -31,10 +31,49 @@ augmented consistency loss: (1) classic version: Loss = CE(f(x_aug), label) (2) 
 4. [On Efficient Transformer and Image Pre-training for Low-level Vision](https://arxiv.org/pdf/2112.10175v1.pdf)
 该论文提出了新的基于encoder-decoder-based transformer的架构。在不同的任务间，有不同的encoder-deocder pair，但是共享同一个transformer stage，从而利用其他任务达到预训练transformer stage的目的。
 
+5. [The Nuts and Bolts of Adopting Transformer in GANs](https://arxiv.org/pdf/2110.13107.pdf?ref=https://githubhelp.com)<br/>
+该论文提出了一个关于GAN的transformer的网络结构，减少了artifacts。<br/>
 
 ## Image Translation
 
 //该论文提出利用一个预定义的mask让网络选择性的优化mask的部分。在SR中，我们也可以用mask将前景和背景分离，分开predict。
+
+## Domain adaptation
+1. [ONE-SHOT GENERATIVE DOMAIN ADAPTATION](https://arxiv.org/pdf/2111.09876.pdf)<br/>
+该论文目标是实现一个zero-shot的DA生成模型。如图，先训练一个GAN学习source domain的图像生成；接着，利用一个adaptor将输入的feature映射到target domain的feature；而此时，判别器还不具备分类target domain的能力，因此在判别器后加一个分类器。该模型可以在大量数据的预训练模型上finetune，保持了原本模型所学得的基本pattern，还可以减少训练的时间。<br/>
+<img src="./figs/one_shot_generative_DA.png " width = "500" />
+
+
+## GAN
+1. [Ensembling Off-the-shelf Models for GAN Training](https://arxiv.org/pdf/2112.09130.pdf) <br/>
+在判别器中，ensemble多个pretrained model的特征，来提升其判别能力，从而提升生成图像的质量。<br/>
+<img src="./figs/ensembling_gan_training.png"  />
+
+2. [Ensembling with Deep Generative Views](https://arxiv.org/pdf/2104.14551.pdf)<br/>
+与论文1相对应，针对生成器的结果进行ensemble，从而提升分类器的性能。该文中，先把图像映射到一个latent vector,针对这个vector加入一些小的扰动，再重新输入到图像中，得到不同的图片。接着，把这些生成的图像分别输入到分类其中，再将其结果进行ensemble，作为最终的结果。<br/>
+<img src="./figs/ensembling_generative_views.png" width = "400" />
+
+3. [GAN-Supervised Dense Visual Alignment](https://arxiv.org/pdf/2112.05143.pdf)<br/>
+该论文中，希望网络学习到目标图像的形状的位置，如猫头的位置，从而进行下一步的图像编辑。这里为了猫的形状，利用了一个spatial transformer network 来学习输入图像的形变参数，从而根据形变参数获得位置关系。在训练STN时，固定生成器的参数，利用peceptual loss计算生成图像和目标图像的距离，使得STN学习到最好的形变参数。
+<br/>
+<img src="./figs/gan_supervised_dense_visual_alignment0.png" width = "500" />
+<img src="./figs/gan_supervised_dense_visual_alignment.png" width = "500" />
+
+4. [Understanding the role of individual units in a deep
+neural network](https://www.pnas.org/content/pnas/117/48/30071.full.pdf)<br/>
+该论文中，分析了VGG16/GAN网络中不同层参数学习到的信息，包括物体形状、区域、材质和颜色。<br/>
+<img src="./figs/understanding_uints_dnn.png" width = "500" />
+
+5. [Rewriting a Deep Generative Model](https://arxiv.org/pdf/2007.15646.pdf)<br/>
+该论文认为网络的权重在学习一些跟pattern相关的规则，通过缩小目标pattern和输入区域的特征差异，从而达到替换目标pattern的目的。<br/>
+<img src="./figs/rewriting_generative_model.png" width = "500" />
+
+6. [Improving GAN Equilibrium by Raising Spatial Awareness](https://arxiv.org/pdf/2112.00718.pdf) <br/>
+本文提出了利用GradCAM提取判别器的热力图，从而向生成器提供一些空间信息，最终提升GAN的平衡<br/>
+<img src="./figs/improve_gan_equilibrium.png" width = "500" />
+
+7. [Positional Encoding as Spatial Inductive Bias in GANs](https://arxiv.org/pdf/2012.05217.pdf) <br/>
+在GAN的编码过程中，存在一些空间bias，而这些bias是由zero padding带来的。<br/>
 
 ## Self-Supervised Representation Learning
 
@@ -77,3 +116,9 @@ This paper found that lifelong learning methods should focus on learning generic
 ## Medical Image Analysis
 1. [Unified 2D and 3D Pre-training for Medical Image Classification and Segmentation](https://arxiv.org/pdf/2112.09356.pdf)<br>
 该论文提出了打破2d和3d的gap，并且先在两种数据上先预训练，然后各自下游任务上再fine tune。<br>
+
+
+## RL
+1. [Off-Policy Reinforcement Learning for Efficient
+and Effective GAN Architecture Search](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123520171.pdf)<br/>
+如题，本文讲了如何利用RL搜索GAN的结构。<br/>
