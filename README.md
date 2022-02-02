@@ -75,6 +75,10 @@ neural network](https://www.pnas.org/content/pnas/117/48/30071.full.pdf)<br/>
 7. [Positional Encoding as Spatial Inductive Bias in GANs](https://arxiv.org/pdf/2012.05217.pdf) <br/>
 在GAN的编码过程中，存在一些空间bias，而这些bias是由zero padding带来的。<br/>
 
+8. [STYLEALIGN: ANALYSIS AND APPLICATIONS
+OF ALIGNED STYLEGAN MODELS](https://openreview.net/pdf?id=Qg2vi4ZbHM9)(ICLR 2022)<br/>
+现有的图像编辑的工作中，有许多基于StyleGAN进行fine-tune的方法，实质上就是迁移学习。该论文分析了这些方法是如何继承父模型的参数，在finetune过程中又是如何修改这些参数的。<br/>
+ 
 ## Self-Supervised Representation Learning
 
 1. [Self-Distilled Self-Supervised Representation Learning](https://arxiv.org/pdf/2111.12958.pdf)
