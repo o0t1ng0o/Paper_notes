@@ -87,6 +87,10 @@ OF ALIGNED STYLEGAN MODELS](https://openreview.net/pdf?id=Qg2vi4ZbHM9)(ICLR 2022
 2. [Are Large-scale Datasets Necessary for Self-Supervised Pre-training?](https://arxiv.org/pdf/2112.10740v1.pdf)
 这篇论文应该是Masked auto-endocder那篇文章的延伸。在同样的框架上，同样的图片输入encoder，decoder分别输入两个不同的masked encoded features，并重构其masked的部分。重构后，两个不同的结果计算互信息损失，提升特征的相似性。该方法在COCO上pretrained的效果竟然比在imagenet的效果有比较大的提升。
 
+3. [Demystifying Unsupervised Semantic Correspondence Estimation](https://arxiv.org/pdf/2207.05054v1.pdf)
+![image](https://user-images.githubusercontent.com/16815652/178417059-5dab9f80-ac45-4ae7-99e5-0f6b25fb1abb.png)
+![image](https://user-images.githubusercontent.com/16815652/178417125-cce2a531-828e-4bed-8629-082d07fc76c1.png)
+
 ## Data Bias
 
 1. [MITIGATING THE BIAS OF CENTERED OBJECTS IN COMMON DATASETS](https://arxiv.org/pdf/2112.09195.pdf)<br>
@@ -110,6 +114,12 @@ This paper found that lifelong learning methods should focus on learning generic
 2. [GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models](https://arxiv.org/pdf/2112.10741v1.pdf)<br>
 该论文介绍了一个可以根据文字和mask编辑图像的网络。
 
+## NLP for Medical
+1. [Explaining Chest X-ray Pathologies in Natural Language](https://arxiv.org/pdf/2207.04343v1.pdf)<br>
+介绍了一个NLE的医疗图像数据集，从报告中提取关键信息。
+![image](https://user-images.githubusercontent.com/16815652/178416400-fe902faf-d149-411d-940f-68b8ae034301.png)
+
+
 ## Knowledge Distillation
 1. [Pixel Distillation: A New Knowledge Distillation Scheme for Low-Resolution Image Recognition](https://arxiv.org/pdf/2112.09532.pdf)<br>
 本文的动机是希望（1）在降低模型输入图像的分辨率的同时，还能保证低分辨率图像特征和高分辨率图像特征相似，另外（2）还希望能够达到压缩模型参数的目的。<br>
@@ -121,6 +131,8 @@ This paper found that lifelong learning methods should focus on learning generic
 1. [Unified 2D and 3D Pre-training for Medical Image Classification and Segmentation](https://arxiv.org/pdf/2112.09356.pdf)<br>
 该论文提出了打破2d和3d的gap，并且先在两种数据上先预训练，然后各自下游任务上再fine tune。<br>
 
+2. [Exploring Contextual Relationships for Cervical Abnormal Cell Detection](https://arxiv.org/pdf/2207.04693v1.pdf)<br>
+利用上下文信息帮助检测。
 
 ## RL
 1. [Off-Policy Reinforcement Learning for Efficient
