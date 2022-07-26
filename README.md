@@ -122,17 +122,20 @@ This paper found that lifelong learning methods should focus on learning generic
 ![image](https://user-images.githubusercontent.com/16815652/180939321-068cc993-0982-4506-bb43-0ea1bdd7924e.png)
 本文提出了一个不需要训练，能够完成few-shot分类任务的框架。利用CLIP visual encoder提取特征，计算few-shot image features 和test image features的affinity map，再把affinity map对应到不同的类别，获得predicted label。
 
+## NLP
+1. [Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering](https://aclanthology.org/2022.acl-long.29.pdf)<br>
+![image](https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png)
+Use hpyergraph in transformer for VQA task.
+
 ## NLP for Medical
 1. [Explaining Chest X-ray Pathologies in Natural Language](https://arxiv.org/pdf/2207.04343v1.pdf)<br>
 介绍了一个NLE的医疗图像数据集，从报告中提取关键信息。
 ![image](https://user-images.githubusercontent.com/16815652/178416400-fe902faf-d149-411d-940f-68b8ae034301.png)
 
-
 ## Knowledge Distillation
 1. [Pixel Distillation: A New Knowledge Distillation Scheme for Low-Resolution Image Recognition](https://arxiv.org/pdf/2112.09532.pdf)<br>
 本文的动机是希望（1）在降低模型输入图像的分辨率的同时，还能保证低分辨率图像特征和高分辨率图像特征相似，另外（2）还希望能够达到压缩模型参数的目的。<br>
 因此，为了动机（2）该论文提出了除了老师和学生模型以外，还提出加入一个助教模型，用于减少模型的参数；为了动机（1）本文提出了在学生和助教模型之间进行像素级的知识蒸馏，保证特征表示与高分辨率的特征一致。
-
 
 
 ## Medical Image Analysis
