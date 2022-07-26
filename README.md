@@ -114,6 +114,14 @@ This paper found that lifelong learning methods should focus on learning generic
 2. [GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models](https://arxiv.org/pdf/2112.10741v1.pdf)<br>
 该论文介绍了一个可以根据文字和mask编辑图像的网络。
 
+3. [What is Where by Looking: Weakly-Supervised Open-World Phrase-Grounding without Text Inputs](https://arxiv.org/pdf/2206.09358.pdf)<br>
+![image](https://user-images.githubusercontent.com/16815652/180938977-1c0c7239-de23-49cf-acb0-476665eb881a.png)
+
+4. [Tip-Adapter: Training-free Adaption of CLIP for Few-shot Classification](https://arxiv.org/pdf/2207.09519.pdf)<br>
+![image](https://user-images.githubusercontent.com/16815652/180939126-edb9f705-6235-42e8-a4ac-5073e6559ce7.png)
+![image](https://user-images.githubusercontent.com/16815652/180939321-068cc993-0982-4506-bb43-0ea1bdd7924e.png)
+本文提出了一个不需要训练，能够完成few-shot分类任务的框架。利用CLIP visual encoder提取特征，计算few-shot image features 和test image features的affinity map，再把affinity map对应到不同的类别，获得predicted label。
+
 ## NLP for Medical
 1. [Explaining Chest X-ray Pathologies in Natural Language](https://arxiv.org/pdf/2207.04343v1.pdf)<br>
 介绍了一个NLE的医疗图像数据集，从报告中提取关键信息。
