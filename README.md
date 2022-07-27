@@ -124,7 +124,7 @@ This paper found that lifelong learning methods should focus on learning generic
 
 ## NLP
 1. [Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering](https://aclanthology.org/2022.acl-long.29.pdf)<br>
-![image](https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png)
+![image](https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png){ width: 200px; }
 Use hpyergraph in transformer for VQA task.
 
 ## NLP for Medical
