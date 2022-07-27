@@ -122,10 +122,19 @@ This paper found that lifelong learning methods should focus on learning generic
 ![image](https://user-images.githubusercontent.com/16815652/180939321-068cc993-0982-4506-bb43-0ea1bdd7924e.png)
 本文提出了一个不需要训练，能够完成few-shot分类任务的框架。利用CLIP visual encoder提取特征，计算few-shot image features 和test image features的affinity map，再把affinity map对应到不同的类别，获得predicted label。
 
+5. [Prototypical Contrastive Language Image Pretraining](https://arxiv.org/pdf/2206.10996.pdf)<br>
+Push student representations towards their cross-modal prototypes.<br> 
+Group the student representation to their within-modal centroid. <br>
+Ensemble multiple teachers to guide student representation.<br>
+![image](https://user-images.githubusercontent.com/16815652/181210681-cf22a029-423c-4dc1-9df4-6d5cd573b8d8.png)
+![image](https://user-images.githubusercontent.com/16815652/181210557-7d72d290-8625-4751-a311-95a603db00b8.png)
+![image](https://user-images.githubusercontent.com/16815652/181210758-c0774fcf-dc13-4364-9735-aa1dd8bfc2d7.png)
+
 ## NLP
 1. [Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering](https://aclanthology.org/2022.acl-long.29.pdf)<br>
-![image]{width: 200px;}(https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png)
+![image](https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png)
 Use hpyergraph in transformer for VQA task.
+
 
 ## NLP for Medical
 1. [Explaining Chest X-ray Pathologies in Natural Language](https://arxiv.org/pdf/2207.04343v1.pdf)<br>
