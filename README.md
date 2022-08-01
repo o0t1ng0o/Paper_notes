@@ -11,9 +11,9 @@ This repository is regarded as a notebook. Please feel free to correct me.
          (3) 还是应该做一个医疗图像自己的pretrained model？<br>
          还有一个问题，还是说我们应该投入精力在hyperparameters的search上？做自动的超参数查找？<br>
          
-## Seeded segmentation
+<!-- ## Seeded segmentation
 首先，seeded segmentation在医疗图像真的很重要吗？
-1. 
+1.  -->
 
 ## Transformer for Computer Vision
 
@@ -115,31 +115,51 @@ This paper found that lifelong learning methods should focus on learning generic
 该论文介绍了一个可以根据文字和mask编辑图像的网络。
 
 3. [What is Where by Looking: Weakly-Supervised Open-World Phrase-Grounding without Text Inputs](https://arxiv.org/pdf/2206.09358.pdf)<br>
-![image](https://user-images.githubusercontent.com/16815652/180938977-1c0c7239-de23-49cf-acb0-476665eb881a.png)
+<img src="https://user-images.githubusercontent.com/16815652/180938977-1c0c7239-de23-49cf-acb0-476665eb881a.png" width = "500" />
 
 4. [Tip-Adapter: Training-free Adaption of CLIP for Few-shot Classification](https://arxiv.org/pdf/2207.09519.pdf)<br>
-![image](https://user-images.githubusercontent.com/16815652/180939126-edb9f705-6235-42e8-a4ac-5073e6559ce7.png)
-![image](https://user-images.githubusercontent.com/16815652/180939321-068cc993-0982-4506-bb43-0ea1bdd7924e.png)
+<img src="https://user-images.githubusercontent.com/16815652/180939126-edb9f705-6235-42e8-a4ac-5073e6559ce7.png" width = "500" />
+<img src="https://user-images.githubusercontent.com/16815652/180939321-068cc993-0982-4506-bb43-0ea1bdd7924e.png" width = "300" />
+<br/>
 本文提出了一个不需要训练，能够完成few-shot分类任务的框架。利用CLIP visual encoder提取特征，计算few-shot image features 和test image features的affinity map，再把affinity map对应到不同的类别，获得predicted label。
 
 5. [Prototypical Contrastive Language Image Pretraining](https://arxiv.org/pdf/2206.10996.pdf)<br>
 Push student representations towards their cross-modal prototypes.<br> 
 Group the student representation to their within-modal centroid. <br>
 Ensemble multiple teachers to guide student representation.<br>
-![image](https://user-images.githubusercontent.com/16815652/181210681-cf22a029-423c-4dc1-9df4-6d5cd573b8d8.png)
-![image](https://user-images.githubusercontent.com/16815652/181210557-7d72d290-8625-4751-a311-95a603db00b8.png)
-![image](https://user-images.githubusercontent.com/16815652/181210758-c0774fcf-dc13-4364-9735-aa1dd8bfc2d7.png)
+<img src="https://user-images.githubusercontent.com/16815652/181210681-cf22a029-423c-4dc1-9df4-6d5cd573b8d8.png" width = "500" />
+<img src="https://user-images.githubusercontent.com/16815652/181210758-c0774fcf-dc13-4364-9735-aa1dd8bfc2d7.png" width = "500" />
+
+6. [Curriculum Learning for Data-Efficient Vision-Language Alignment](https://arxiv.org/pdf/2207.14525v1.pdf)<br>
+构造不同难度的contrastive task使得visual和textual reprentation对齐。
+<img src="./figs/curi_learning_for_CLIP.jpg" width="400"/>
+
+7. [Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training](https://arxiv.org/pdf/2207.12661.pdf)<br>
+该论文提出了文本和图像共享更多的模型参数，会带来更大的性能提升。利用共享的参数，可以让两者的语义概念在特征空间更加接近。
+<img src="./figs/MS_CLIP.jpg" width = "500" />
+
+8. [Prompt-aligned Gradient for Prompt Tuning](https://arxiv.org/pdf/2205.14865.pdf)<br>
+在CLIP中，我们常常会让prmopt模版可以学习，从而提升下游任务的性能。但是fine-tune的过程中，有可能会忘掉之前的预训练模型的知识。因为在fine-tune的过程中，计算fine-tune模型的预测p，并用ce loss来优化模型，其中有可能优化的时候偏离原始的知识。为了避免这个问题，计算了 p 和 基于原始预训练模型zero-shot prediction的KL散度（KL散度代表了与原始知识偏离的程度），比较KL散度的梯度G_{KL}和ce loss的梯度G_{ce}，如果小于1说明CE loss的优化的方向是正确的，反之亦然。<br>
+<img src="./figs/prmopt_gradient.jpg" width = "500" />
+
+9. [CYCLIP: Cyclic Contrastive Language-Image Pretraining](https://arxiv.org/pdf/2205.14459.pdf)<br>
+CYCLIP is cyclic consistent between image-text pairs as the in-modal distances, d(Tcat, Tdog) ∼ d(Icat, Idog), and the cross-modal distances, d(Tcat, Idog) ∼ d(Icat, Tdog), are similar to each other unlike CLIP.<br>
+<img src="./figs/cyclip1.jpg" width = "500" />
+<img src="./figs/cyclip2.jpg" width = "500" />
+
+
 
 ## NLP
 1. [Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering](https://aclanthology.org/2022.acl-long.29.pdf)<br>
-![image](https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png)
+<img src="https://user-images.githubusercontent.com/16815652/180947194-e42808f4-0b0e-4256-beed-d8f3dd3316ad.png" width = "500" />
 Use hpyergraph in transformer for VQA task.
 
 
 ## NLP for Medical
 1. [Explaining Chest X-ray Pathologies in Natural Language](https://arxiv.org/pdf/2207.04343v1.pdf)<br>
 介绍了一个NLE的医疗图像数据集，从报告中提取关键信息。
-![image](https://user-images.githubusercontent.com/16815652/178416400-fe902faf-d149-411d-940f-68b8ae034301.png)
+<img src="https://user-images.githubusercontent.com/16815652/178416400-fe902faf-d149-411d-940f-68b8ae034301.png" width = "500" />
+
 
 ## Knowledge Distillation
 1. [Pixel Distillation: A New Knowledge Distillation Scheme for Low-Resolution Image Recognition](https://arxiv.org/pdf/2112.09532.pdf)<br>
