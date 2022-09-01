@@ -147,6 +147,14 @@ CYCLIP is cyclic consistent between image-text pairs as the in-modal distances, 
 <img src="./figs/cyclip1.jpg" width = "500" />
 <img src="./figs/cyclip2.jpg" width = "500" />
 
+10. [Open-world Semantic Segmentation via Contrasting and Clustering Vision-Language Embedding](https://arxiv.org/pdf/2207.08455.pdf)<br>
+本文关键是提出了一个 online clustering loss, 将原图和增强的图像作为成对的cluster pixel pair，并最大化两种图像对应的cluster map的互信息，从而让模型学会哪些像素是同一个类。在预测的时候，将同一个cluster的pixel特征和不同类别文本匹配，即可获得对应cluster的类别<br>
+<img src="./figs/ViL-Seg.jpg" width = "500" />
+
+11. [Learning Hierarchy Aware Features for Reducing Mistake Severity](https://arxiv.org/pdf/2207.12646.pdf)<br>
+It proposes a probabilistic approach using to learn hierarchy-aware features that respect the label hierarchy in the feature space and thereby make semantically meaningful mistakes<br>
+<img src="./figs/HAF.jpg" width = "500" />
+<img src="./figs/haf2.jpg" width = "200" />
 
 
 ## NLP
