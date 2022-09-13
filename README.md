@@ -2,6 +2,10 @@
 This repository contains the paper notes for medical image, computer vision or any other area.
 This repository is regarded as a notebook. Please feel free to correct me. 
 
+Outlines:
+* [Hierarchical Clustering](#HC)
+
+
 ## Rethinking 
 1. [Rethinking the hyperparameters for fine-tuning](https://arxiv.org/pdf/2002.11770.pdf) <br>
    Content: 本文讲了超参数的选择对fine-tune的影响，主要包含学习率、动量和正则项。其中一点，pretrained model的数据集domain (source domain) 与fine-tune数据集domain (target domain)的差距会影响着超参数的选择，尤其是学习率和动量。当source domain和target domain差距很大时，则要用较小的动量，even m=0；反之，则较大的动量（0.9）。这意味着source domain和target domain之间存在着一定的gap，所以才要根据这个gap给定不同的动量来fine-tune。后面还讲到了最优的学习率的结论，也和上述相似。<br>
@@ -186,3 +190,23 @@ Use hpyergraph in transformer for VQA task.
 1. [Off-Policy Reinforcement Learning for Efficient
 and Effective GAN Architecture Search](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123520171.pdf)<br/>
 如题，本文讲了如何利用RL搜索GAN的结构。<br/>
+
+<h2 id="HC">Hierarchical Clustering</h2>
+
+1. [Learning Hierarchical Graph Neural Networks for Image Clustering](https://openaccess.thecvf.com/content/ICCV2021/papers/Xing_Learning_Hierarchical_Graph_Neural_Networks_for_Image_Clustering_ICCV_2021_paper.pdf) 
+(ICCV2021)<br/>
+<img src="figs/hc1.jpg" width = "500" /><br/>
+
+2. [Contrastive Multi-view Hyperbolic Hierarchical Clustering](https://arxiv.org/pdf/2205.02618.pdf)<br/>
+<img src="figs/hc2.jpg" width = "400" /><br/>
+
+3. [Hierarchically Clustered Representation Learning](https://arxiv.org/pdf/1901.09906.pdf)<br/>
+<img src="figs/hc3.jpg" width = "400" /><br/>
+
+4. [Hierarchical Clustering with Hard-batch Triplet Loss for Person Re-identification](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zeng_Hierarchical_Clustering_With_Hard-Batch_Triplet_Loss_for_Person_Re-Identification_CVPR_2020_paper.pdf)<br/>
+<img src="figs/hc4.jpg" width = "200" /><br/>
+
+5. [Unsupervised Hierarchical Semantic Segmentation with Multiview Cosegmentation and Clustering Transformers](https://openaccess.thecvf.com/content/CVPR2022/papers/Ke_Unsupervised_Hierarchical_Semantic_Segmentation_With_Multiview_Cosegmentation_and_Clustering_Transformers_CVPR_2022_paper.pdf)<br/>
+<img src="figs/hc5.jpg" width = "350" /><br/>
+
+
